@@ -23,3 +23,35 @@ func MakeMap(file *os.File) map[rune][9]string {
 	}
 	return ans
 }
+
+func CheckRange(words []string, ascii map[rune][9]string) bool {
+	for _, val := range words {
+		for _, v := range val {
+			if !(v >= 32 && v <= 126) {
+				return false
+			}
+		}
+	}
+	return true
+}
+
+func PrintAns(words []string, ascii map[rune][9]string) string {
+	answer := ""
+
+	for _, val := range words {
+		if val == "" {
+			answer += " "
+			answer += "\n"
+			continue
+		}
+		for i := 1; i < 9; i++ {
+
+			for _, v := range val {
+				answer += ascii[v][i]
+			}
+			answer += "\n"
+
+		}
+	}
+	return answer
+}
