@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link href="/templates/css/style.css" rel="stylesheet" type="text/css">
+    <link type="image/x-icon" href="templates/img/d2fav.ico" rel="shortcut icon">
+    <title>Ascii</title>
+</head>
+
+<body>
+    <div>
+        <img src="/templates/img/d2d.png" class="head">
+        <form class="middle" action="/ascii-art" method="POST">
+            <textarea class="input" type="text" name="req"></textarea>
+            <div class="buttons">
+                <input class="font_button" type="radio" id="standard" name="font" value="standard" required
+                    onclick="this.form.submit();">
+                <input class="font_button" type="radio" id="shadow" name="font" value="shadow"
+                    onclick="this.form.submit();">
+                <input class="font_button" type="radio" id="thinkertoy" name="font" value="thinkertoy"
+                    onclick="this.form.submit();">
+                <div>
+                    <label class="img_button" for="standard"><img class="button_image" src="/templates/img/standard.jpg"
+                            alt=""></label>
+                </div>
+                <div>
+                    <label class="img_button" for="shadow"><img class="button_image" src="/templates/img/shadow.jpg"
+                            alt=""></label>
+                </div>
+                <div>
+                    <label class="img_button" for="thinkertoy"><img class="button_image"
+                            src="/templates/img/thinkertoy.jpg" alt=""></label>
+                </div>
+            </div>
+        </form>
+</body>
+
+</html>
