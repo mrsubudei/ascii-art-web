@@ -1,0 +1,170 @@
+/* ------------------------------general--------------------------- */
+
+@font-face {
+    font-family: "Diablo";
+    src: url(Diablo.ttf);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+   background: url(../img/background.jpg) no-repeat;
+   background-size: cover;
+   display: block; 
+   font-family: Diablo;
+}
+
+:hover {
+	cursor: url(../img/DII.cur), auto;
+}
+
+textarea {
+    margin-bottom: 24px;
+    resize: none;
+}
+
+.head {
+    position: relative;
+    max-width: 30%; 
+    left: 50%;
+    right: 50%; 
+    display: block;
+    transform: translate(-50%, 0);
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ---------------------------for index.html------------------------- */
+
+
+.input {
+    padding: 0;
+    border: 0;
+    width: 500px;
+    height: 100px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-family: Diablo;
+    padding: 16px 12px;
+    font-size: 32px;
+ }
+
+ .input:focus-visible {
+    outline: 3px solid red;
+    box-shadow: 0px 1px 31px 9px rgba(255,0,0,0.67);
+   -webkit-box-shadow: 0px 1px 31px 9px rgba(255,0,0,0.67);
+   -moz-box-shadow: 0px 1px 31px 9px rgba(255,0,0,0.67);
+}
+
+ @media (max-width:600px) {
+    .input {
+        width: 80vw;
+        font-size: 5vw;
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.button_image {
+    transition: 0.5s;
+    opacity: 0.5;
+
+}
+
+@media (min-width:1921px) {
+    .button_image {
+        width: 14vw;
+    }
+    .back {
+        width: 9vw;
+    }
+    .buttons {
+        row-gap: 0.3vw;
+    }
+}
+
+.font_button {
+    display: none;
+}
+
+.img_button:hover .button_image{
+    opacity: 1;
+}
+
+.img_button:hover .back{
+    opacity: 1;
+}
+
+/* -----------------------------for answer.html------------------------- */
+
+.input_ans {
+    padding: 0;
+    border: 0;
+    width: 800px;
+    height: 300px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 16px 12px;
+ }
+
+ .input_ans:focus-visible {
+    outline: 3px solid red;
+    box-shadow: 0px 1px 31px 9px rgba(255,0,0,0.67);
+   -webkit-box-shadow: 0px 1px 31px 9px rgba(255,0,0,0.67);
+   -moz-box-shadow: 0px 1px 31px 9px rgba(255,0,0,0.67);
+}
+
+@media (max-width:900px) {
+    .input_ans {
+        width: 88vw;
+    }
+}
+
+.back {
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+/* -------------------------------for errors.html------------------------- */
+
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+
+.status_code {
+    margin-top: 5vw;
+    font-size: 8vw;
+    color: rgb(129, 8, 8);
+}
+
+.err_message {
+    font-size: 3vw;
+    color: rgb(194, 146, 15);
+    margin-bottom: 5vw;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.back_error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
