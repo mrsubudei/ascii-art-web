@@ -3,6 +3,7 @@ package app
 import (
 	"ascii-art-web/pkg/ascii"
 	"net/http"
+	"strconv"
 	"text/template"
 )
 
@@ -80,6 +81,18 @@ func CreateHandler(writer http.ResponseWriter, request *http.Request) {
 		http.Error(writer, "404: Not Found", 404)
 		return
 	}
+}
+
+func DownloadHandler(writer http.ResponseWriter, request *http.Request) {
+	if request.Method != http.MethodGet {
+		Errors(writer, "Method is not Allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	writer.Header().Add("Content-Length", strconv.Itoa(len(Ascii.Str)))
+	writer.Header().Add("Content-Language", "en")
+	writer.Header().Add("Content-Disposition", "attachment; filename=ascii-art.txt")
+	writer.Header().Add("Content-Type", "text/plain; charset=utf-8")
+	writer.Write([]byte(Ascii.Str))
 }
 
 func Errors(writer http.ResponseWriter, er string, code int) {
