@@ -15,7 +15,16 @@
     <div>
         <img src="/templates/img/d2d.png" class="head">
         <div class="middle">
-            <textarea class="input_ans" type="text" name="req" readonly="true" wrap="off">{{.Str}}</textarea>
+            <textarea class="input_ans" type="text" name="req" readonly="true" wrap="off">{{.Art}}</textarea>
+            <form action="/download" method="GET">
+                <div class="buttons">
+                    <input class="font_button" type="radio" id="save" onclick="this.form.submit();">
+                    <div>
+                        <label class="img_button" for="save"><img class="back" src="/templates/img/exprt.jpg"
+                                alt=""></label>
+                    </div>
+                </div>
+            </form>
             <div class="buttons">
                 <div>
                     <a class="img_button" href="/"><img class="back" src="templates/img/back.png" alt=""></a>
