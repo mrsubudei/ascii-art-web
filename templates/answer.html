@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="ascii">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="#">
-    <link href="templates/css/style.css" rel="stylesheet" type="text/css">
-    <link type="image/x-icon" href="templates/img/d2fav.ico" rel="shortcut icon">
-    <title>Ascii</title>
-</head>
-
-<body>
-    <div>
-        <img src="/templates/img/d2d.png" class="head">
-        <div class="middle">
+   <head>
+      <meta charset="ascii">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="#">
+      <link href="templates/css/style.css" rel="stylesheet" type="text/css">
+      <link type="image/x-icon" href="templates/img/d2fav.ico" rel="shortcut icon">
+      <title>Ascii</title>
+   </head>
+   <body>
+      <div>
+         <img src="/templates/img/d2d.png" class="head">
+         <div class="middle">
             <textarea class="input_ans" type="text" name="req" readonly="true" wrap="off">{{.Art}}</textarea>
-            <form action="/download" method="GET">
-                <div class="buttons">
-                    <input class="font_button" type="radio" id="save" onclick="this.form.submit();">
-                    <div>
-                        <label class="img_button" for="save"><img class="back" src="/templates/img/exprt.jpg"
-                                alt=""></label>
-                    </div>
-                </div>
-            </form>
+               <form action="/download" method="GET">
+                  <div class="buttons">
+                     <input class="font_button" type="radio" id="save" onclick="this.form.submit();">
+                     <div>
+                        <label class="img_button" for="save"><img class="back" src="/templates/img/exprt.jpg" alt=""></label>
+                     </div>
+                  </div>
+               </form>
             <div class="buttons">
-                <div>
-                    <a class="img_button" href="/"><img class="back" src="templates/img/back.png" alt=""></a>
-                </div>
+               <div>
+                  <a class="img_button" href="/"><img class="back" src="templates/img/back.png" alt=""></a>
+               </div>
             </div>
-        </div>
-    </div>
-</body>
-
+         </div>
+      </div>
+   </body>
 </html>
