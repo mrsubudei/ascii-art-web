@@ -1,4 +1,4 @@
-# ASCII ART WEB EXPORT FILE
+# ASCII ART WEB
 
 ### DESCRIPTION    
 The program allows users to draw ASCII Art from the input and save result as txt file.  
@@ -15,8 +15,28 @@ go run cmd/main.go
 4. Choose the preferred banner
 5. To save file click on export button
 
-  
-  
+_________________________________________________
+
+To create docker image:
+```
+make build
+```
+To run image
+```
+make run
+```
+To stop container
+```
+make stop
+```
+To remove image:
+```
+make remove
+```
+Stops and removes container:
+```
+make kill
+```
+
 ### AUTHORS
-@Subudei   
-@DarkhanShakhan
+@Subudei
